@@ -6,8 +6,8 @@ app = Flask(__name__)
 # ログタイプごとのGAS Webhook URLをここで一元管理
 GAS_ENDPOINTS = {
     "emotion-log": "https://script.google.com/macros/s/AKfycbzu9ABKFahbFIQsDWkTJR8ZE-czB4mrp9XEzxq9ahy8fIMoAw_-gARgx2cQd-XefrrfCA/exec",
-    "dialogue-log": "https://script.google.com/macros/s/AKfycbxTi-TURT9me63Txvp4E8XerGXX7u1HorEpCbJn89F0oF599IJyb6VwFEDCuRGWXsSX/exec"
-     "task-log": "https://script.google.com/macros/s/AKfycbzwjGcZHgyiZCoEoiBC0AlK1HzTIexfkGzIrrQcJOGWmmeviO6dTP1gBtmC2x8D-UsbgQ/exec",
+    "dialogue-log": "https://script.google.com/macros/s/AKfycbxTi-TURT9me63Txvp4E8XerGXX7u1HorEpCbJn89F0oF599IJyb6VwFEDCuRGWXsSX/exec",
+    "task-log": "https://script.google.com/macros/s/AKfycbzwjGcZHgyiZCoEoiBC0AlK1HzTIexfkGzIrrQcJOGWmmeviO6dTP1gBtmC2x8D-UsbgQ/exec",
     "get-task-log": "https://script.google.com/macros/s/AKfycbzwjGcZHgyiZCoEoiBC0AlK1HzTIexfkGzIrrQcJOGWmmeviO6dTP1gBtmC2x8D-UsbgQ/exec"
 }
 
