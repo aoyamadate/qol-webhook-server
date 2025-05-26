@@ -3,12 +3,14 @@ import requests
 
 app = Flask(__name__)
 
-# GAS Webhook の送信先URL（新しいGAS URLに修正済み）
+# GAS Webhook の送信先URL（task-logのみ修正済み）
 GAS_ENDPOINTS = {
     "emotion-log": "https://script.google.com/macros/s/AKfycbzu9ABKFahbFIQsDWkTJR8ZE-czB4mrp9XEzxq9ahy8fIMoAw_-gARgx2cQd-XefrrfCA/exec",
     "dialogue-log": "https://script.google.com/macros/s/AKfycbz3ATERSJlJBzg8iYKJ2n3gCYIx5orU6F3Boh7yybK47loa2c2adyxT8xIKPaYlOpd0/exec",
-    "task-log": "https://script.google.com/macros/s/AKfycbxXFzMtwE1jV55NZMiATcT5ChuDUwEDl7lAoRGHOfiHTB0Cjq-qBrDyOovvB7R7wnaXDA/exec",
-    "get-task-log": "https://script.google.com/macros/s/AKfycbxXFzMtwE1jV55NZMiATcT5ChuDUwEDl7lAoRGHOfiHTB0Cjq-qBrDyOovvB7R7wnaXDA/exec"
+    
+    # ✅ 修正ポイント：タスクログはこの新しいURLを使う
+    "task-log": "https://script.google.com/macros/s/AKfycbwnYxAKW9FG9eWMpXwzHIZwVWkMMsh-VVz5z977IuEvzEwjnnl5VTsGjZl3t-mRKPxDVQ/exec",
+    "get-task-log": "https://script.google.com/macros/s/AKfycbwnYxAKW9FG9eWMpXwzHIZwVWkMMsh-VVz5z977IuEvzEwjnnl5VTsGjZl3t-mRKPxDVQ/exec"
 }
 
 @app.route("/<log_type>", methods=["POST", "GET"])
@@ -21,6 +23,7 @@ def relay_log(log_type):
 
         if request.method == "POST":
             data = request.json
+            print("📤 送信内容:", data)  # ログ出力（確認用）
             response = requests.post(gas_url, json=data)
         else:  # GET
             response = requests.get(gas_url)
@@ -31,6 +34,7 @@ def relay_log(log_type):
             "log_type": log_type,
             "gas_response": response.text
         }), response.status_code
+
     except Exception as e:
         return jsonify({
             "status": "error",
