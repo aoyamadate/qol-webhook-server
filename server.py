@@ -9,8 +9,8 @@ GAS_ENDPOINTS = {
     "dialogue-log": "https://script.google.com/macros/s/AKfycbz3ATERSJlJBzg8iYKJ2n3gCYIx5orU6F3Boh7yybK47loa2c2adyxT8xIKPaYlOpd0/exec",
     
     # ✅ 修正ポイント：タスクログはこの新しいURLを使う
-    "task-log": "https://script.google.com/macros/s/AKfycbwnYxAKW9FG9eWMpXwzHIZwVWkMMsh-VVz5z977IuEvzEwjnnl5VTsGjZl3t-mRKPxDVQ/exec",
-    "get-task-log": "https://script.google.com/macros/s/AKfycbwnYxAKW9FG9eWMpXwzHIZwVWkMMsh-VVz5z977IuEvzEwjnnl5VTsGjZl3t-mRKPxDVQ/exec"
+    "task-log": "https://script.google.com/macros/s/AKfycbyILTjphvRvFGcyosM0vqHQI0B4GEiCGU5EJbih-mJqVy1Pt9iW3SX-Tw3-wV_qprDHlw/exec",
+    "get-task-log": "https://script.google.com/macros/s/AKfycbyILTjphvRvFGcyosM0vqHQI0B4GEiCGU5EJbih-mJqVy1Pt9iW3SX-Tw3-wV_qprDHlw/exec",
 }
 
 @app.route("/<log_type>", methods=["POST", "GET"])
