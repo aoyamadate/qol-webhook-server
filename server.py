@@ -48,3 +48,41 @@ def relay_log(log_type):
             "status": "error",
             "message": str(e)
         }), 500
+
+@app.route("/task-review-input", methods=["POST"])
+def handle_task_review():
+    try:
+        data = request.json
+        print("📥 受信データ（朝の送信）:", data)
+
+        # 仮のタスク配置レスポンス（今後GPT連携に置き換え）
+        example_response = [
+            {
+                "title": "［自動］資料作成",
+                "start": f"{data['date']}T10:00:00+09:00",
+                "end": f"{data['date']}T11:00:00+09:00",
+                "calendarId": "自動タスク配置"
+            },
+            {
+                "title": "［自動］日報記録",
+                "start": f"{data['date']}T14:00:00+09:00",
+                "end": f"{data['date']}T14:15:00+09:00",
+                "calendarId": "自動タスク配置"
+            }
+        ]
+
+        # GASへ送信
+        schedule_url = "https://script.google.com/macros/s/AKfycbzCY_WIGjj68oPeRXJhe7lvon7E_2AlggfzyK6rPRQavPLLC8ZfBCGvd9IIWZxixgcD/exec"
+        response = requests.post(schedule_url, json=example_response)
+
+        return jsonify({
+            "status": "processed",
+            "message": "GPT判断（仮）→ GASへ送信完了",
+            "gas_response": response.text
+        })
+
+    except Exception as e:
+        return jsonify({
+            "status": "error",
+            "message": str(e)
+        }), 500
