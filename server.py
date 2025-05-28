@@ -6,7 +6,7 @@ app = Flask(__name__)
 # GAS Webhook の送信先URL一覧（最新版）
 GAS_ENDPOINTS = {
     # ✅ 感情ログ（記録）
-    "emotion-log": "https://script.google.com/macros/s/AKfycbwT-bi59E9SLMq0pjcPjcFyky6WiH2b9a06FHZu8rpGiS8dEWbcYDRduA8Nbj6kCsiMfg/exec",
+    "emotion-log": "https://script.google.com/macros/s/AKfycbzs3m9BW6DBCMm8SC4EUUb_7XtxAih8QJzK3OPrkfXWo0gqGjoef5FBhMTTbSPpsYL4/exec",
 
     # ✅ 対話ログ
     "dialogue-log": "https://script.google.com/macros/s/AKfycbz3ATERSJlJBzg8iYKJ2n3gCYIx5orU6F3Boh7yybK47loa2c2adyxT8xIKPaYlOpd0/exec",
