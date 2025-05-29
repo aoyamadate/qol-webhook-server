@@ -23,7 +23,10 @@ GAS_ENDPOINTS = {
 
     # ✅ 睡眠ログ（記録・取得）
     "sleep-log": "https://script.google.com/macros/s/AKfycbzI5woorPQImM0VT7K9LDHmpiVUiXKzkUURjTs3I2D7s-U4ZfJBx0oxNmOZHDCtPpyu/exec",
-    "sleep-log-data": "https://script.google.com/macros/s/AKfycbzI5woorPQImM0VT7K9LDHmpiVUiXKzkUURjTs3I2D7s-U4ZfJBx0oxNmOZHDCtPpyu/exec"
+    "sleep-log-data": "https://script.google.com/macros/s/AKfycbzI5woorPQImM0VT7K9LDHmpiVUiXKzkUURjTs3I2D7s-U4ZfJBx0oxNmOZHDCtPpyu/exec",
+
+    # ✅ 通学スケジュール登録（追加）
+    "commute-schedule": "https://script.google.com/macros/s/AKfycbx7PIaozi_9aeMx21gH4kk7joJ6Ndd5k5yWiwL5N9rYpQ6YqKXYXjsENTDTROGmweKo/exec"
 }
 
 @app.route("/<log_type>", methods=["POST", "GET"])
@@ -36,11 +39,11 @@ def relay_log(log_type):
 
         if request.method == "POST":
             data = request.json
-            print("📤 POST送信:", data)
+            print("\U0001F4E4 POST送信:", data)
             response = requests.post(gas_url, json=data)
         else:  # GET
             params = request.args.to_dict()
-            print("📥 GETパラメータ:", params)
+            print("\U0001F4E5 GETパラメータ:", params)
             response = requests.get(gas_url, params=params)
 
         return jsonify({
