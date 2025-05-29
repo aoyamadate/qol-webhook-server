@@ -26,7 +26,7 @@ GAS_ENDPOINTS = {
     "sleep-log-data": "https://script.google.com/macros/s/AKfycbzI5woorPQImM0VT7K9LDHmpiVUiXKzkUURjTs3I2D7s-U4ZfJBx0oxNmOZHDCtPpyu/exec",
 
     # ✅ 通学スケジュール登録（追加）
-    "commute-schedule": "https://script.google.com/macros/s/AKfycbxhqpIFJyKSex22Ox0DrHls04keZfFTHSpepJZzICjI1gEhoEXh8czVAXVm3SzmRrjP/exec",
+    "commute-schedule": "https://script.google.com/macros/s/AKfycbzl9-uegpxWbf-pvgC-h6uy-e9MPb3tqm0vERtBb0sKFi2-UDelDtuGWMTTjfbRFIEo/exec",
 
     # ✅ カレンダー予定取得（追加）
     "calendar-events": "https://script.google.com/macros/s/AKfycbyRT7RLNz7jRC9kvCWDmFnOyyWVKETUv6mrzHt470EYBDDwXTx2qRiSLhbrD9x1U0mY/exec"
