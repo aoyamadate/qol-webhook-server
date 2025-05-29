@@ -18,8 +18,8 @@ GAS_ENDPOINTS = {
     "get-task-log": "https://script.google.com/macros/s/AKfycbzqaYZcZz_GT9Hz1Uiv7t9T86Keg5K0WbGN6tTBOir5bZp8zckMKy-BtpyD_svQOkQymw/exec",
 
     # ✅ 食事ログ（記録・取得）
-    "meal-log": "https://script.google.com/macros/s/AKfycbysr5e2S1brmRsgj0OomEM5wi35wRrEweGxDBXRYOYimPdHHAEoFZ1gx5Kicdc2hHp4/exec",
-    "meal-log-data": "https://script.google.com/macros/s/AKfycbysr5e2S1brmRsgj0OomEM5wi35wRrEweGxDBXRYOYimPdHHAEoFZ1gx5Kicdc2hHp4/exec",
+    "meal-log": "https://script.google.com/macros/s/AKfycbzoZ1Tm9Tz_tdD1Y1jDuu9ize5InTuPNTOLaaBzR-1RIMpxw7BezWH7mynKRheYiB_F/exec",
+    "meal-log-data": "https://script.google.com/macros/s/AKfycbzoZ1Tm9Tz_tdD1Y1jDuu9ize5InTuPNTOLaaBzR-1RIMpxw7BezWH7mynKRheYiB_F/exec",
 
     # ✅ 睡眠ログ（記録・取得）
     "sleep-log": "https://script.google.com/macros/s/AKfycbzI5woorPQImM0VT7K9LDHmpiVUiXKzkUURjTs3I2D7s-U4ZfJBx0oxNmOZHDCtPpyu/exec",
