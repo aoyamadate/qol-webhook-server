@@ -29,7 +29,7 @@ GAS_ENDPOINTS = {
     "commute-schedule": "https://script.google.com/macros/s/AKfycbytMQ0xantaWntIFkYM69HYT-FiVYupitMidhqEQRIe7Wnpo14aZqzi2UmbnC069xg/exec",
 
     # ✅ カレンダー予定取得（追加）
-    "calendar-events": "https://script.google.com/macros/s/AKfycbyNQH0HLU0eTLe3mTTngtoKn4AlgbIKRBSvKVYWWchjH8ciQa1Dmg5j2LdRSLieqzrb/exec"
+    "calendar-events": "https://script.google.com/macros/s/AKfycbyRT7RLNz7jRC9kvCWDmFnOyyWVKETUv6mrzHt470EYBDDwXTx2qRiSLhbrD9x1U0mY/exec"
 }
 
 @app.route("/<log_type>", methods=["POST", "GET"])
